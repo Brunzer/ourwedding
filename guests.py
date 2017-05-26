@@ -14,10 +14,10 @@ form = cgi.FieldStorage()
 def listGuests():
 	try:
 		conn = MySQLdb.connect (
-		host = "jeffbrunsek.netfirmsmysql.com",
-		user = "brunzer",
-		passwd = "123456",
-		db = "wedding")
+		host = DB_Host
+		user = DB_User
+		passwd = DB_Pass
+		db = DB_Name
 				
 		mysql = conn.cursor()
 		mysql.execute("""SELECT * FROM guests""")
